@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import { useCallback } from 'react';
+import { useCallback } from "react";
 
 function useThrottle(fn: Function, delay: number = 5000) {
   let timer: number | null = null;
@@ -14,5 +14,5 @@ function useThrottle(fn: Function, delay: number = 5000) {
 
 export function useThrottleCallBack(fn: Function, delay: number = 5000) {
   const throttled = useThrottle(fn, delay);
-  return useCallback(throttled, [throttled])
+  return useCallback(throttled, [throttled]);
 }

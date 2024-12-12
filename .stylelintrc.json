@@ -1,0 +1,6 @@
+{
+	"extends": ["stylelint-config-recommended", "stylelint-config-clean-order"],
+	"rules": {
+		"length-zero-no-unit": true
+	}
+}

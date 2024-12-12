@@ -1,5 +1,5 @@
-import './App.css'
-import { useEffect, useRef } from 'react'
+import "./App.css";
+import { useEffect, useRef } from "react";
 // const data = {
 //   type: 'cms-operation-init',
 //   list: [
@@ -11,35 +11,43 @@ import { useEffect, useRef } from 'react'
 // }
 
 const data = {
-  type: 'cms-operation-init',
+  type: "cms-operation-init",
   list: [
-    { label: '启动运营弹窗/startup', value: 'startup' },
+    { label: "启动运营弹窗/startup", value: "startup" },
     // { label: '发现页/banner2020', value: 'banner2020' },
     // { label: '开机广告/boot-advertising', value: 'boot-advertising' },
-  ]
-}
+  ],
+};
 
-const url = 'http://testcms.gf.com.cn/#/app/gf-stockindex/trade-menu/popup?platform_source=oms';
+const url =
+  "http://testcms.gf.com.cn/#/app/gf-stockindex/trade-menu/popup?platform_source=oms";
 
 function App() {
   const framRef = useRef<HTMLIFrameElement>(null);
 
-
   useEffect(() => {
-    window.addEventListener('message', postMessageHandle)
-  }, [])
+    window.addEventListener("message", postMessageHandle);
+  }, []);
 
   const postMessageHandle = (message: MessageEvent) => {
-    if (message.data.type !== 'cms-operation-ready') return;
+    if (message.data.type !== "cms-operation-ready") return;
     console.log(message);
-    framRef.current?.contentWindow?.postMessage(data, 'http://testcms.gf.com.cn')
-  }
+    framRef.current?.contentWindow?.postMessage(
+      data,
+      "http://testcms.gf.com.cn",
+    );
+  };
 
   return (
-    <div className='c'>
-      <iframe ref={framRef} src={url} sandbox='allow-scripts allow-same-origin' style={{ border: 0, width: '100%', height: '100%' }}></iframe>
+    <div className="c">
+      <iframe
+        ref={framRef}
+        src={url}
+        sandbox="allow-scripts allow-same-origin"
+        style={{ border: 0, width: "100%", height: "100%" }}
+      ></iframe>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
