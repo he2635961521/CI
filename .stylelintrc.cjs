@@ -12,14 +12,10 @@ module.exports = {
     // 样式属性顺序规则
     'stylelint-config-clean-order',
     // 接入 Prettier 规则
-    // 'stylelint-config-prettier',
   ],
   // 配置 rules
   rules: {
     // 开启 Prettier 自动格式化功能
     'prettier/prettier': true,
-    'declaration-empty-line-before': 'never',
-    "rule-empty-line-before": 'always',
-    'custom-property-empty-line-before': 'never'
   }
 };

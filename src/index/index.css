@@ -1,6 +1,7 @@
 :root {
   width: 100vw;
   height: 100vh;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -8,8 +9,10 @@
   line-height: 1.5;
   color: rgb(255 255 255 / 87%);
   text-rendering: optimizelegibility;
+
   color-scheme: light dark;
   background-color: #242424;
+
   font-synthesis: none;
 }
 
@@ -34,8 +37,10 @@ body {
 
 body {
   zoom: 1;
+
   display: flex;
   place-items: center;
+
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
@@ -48,13 +53,17 @@ h1 {
 
 button {
   cursor: pointer;
+
   padding: 0.6em 1.2em;
+
   font-family: inherit;
   font-size: 1em;
   font-weight: 500;
+
   background-color: #1a1a1a;
   border: 1px solid transparent;
   border-radius: 8px;
+
   transition: border-color 0.25s;
 }
 
