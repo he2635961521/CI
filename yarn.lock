@@ -4576,6 +4576,11 @@ stylelint-config-clean-order@^6.1.0:
   dependencies:
     stylelint-order "^6.0.4"
 
+stylelint-config-prettier@^9.0.5:
+  version "9.0.5"
+  resolved "http://npm.gf.com.cn:80/artifactory/api/npm/npm/stylelint-config-prettier/-/stylelint-config-prettier-9.0.5.tgz#9f78bbf31c7307ca2df2dd60f42c7014ee9da56e"
+  integrity sha1-n3i78xxzB8ot8t1g9CxwFO6dpW4=
+
 stylelint-config-recommended-less@^3.0.1:
   version "3.0.1"
   resolved "http://npm.gf.com.cn:80/artifactory/api/npm/npm/stylelint-config-recommended-less/-/stylelint-config-recommended-less-3.0.1.tgz#320d1a9998aa90091247d1df7b0f75072500389f"
@@ -4627,6 +4632,13 @@ stylelint-order@^6.0.4:
   dependencies:
     postcss "^8.4.32"
     postcss-sorting "^8.0.2"
+
+stylelint-prettier@^5.0.2:
+  version "5.0.2"
+  resolved "http://npm.gf.com.cn:80/artifactory/api/npm/npm/stylelint-prettier/-/stylelint-prettier-5.0.2.tgz#82c0a813d8981fe094fca28126fc88cee22fa789"
+  integrity sha1-gsCoE9iYH+CU/KKBJvyIzuIvp4k=
+  dependencies:
+    prettier-linter-helpers "^1.0.0"
 
 stylelint@^16.11.0:
   version "16.11.0"
