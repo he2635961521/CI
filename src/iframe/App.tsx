@@ -1,4 +1,3 @@
-import "./App.css";
 import { useEffect, useRef } from "react";
 // const data = {
 //   type: 'cms-operation-init',
