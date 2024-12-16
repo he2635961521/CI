@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { useCallback } from "react";
 
-function useThrottle(fn: Function, delay: number = 5000) {
+function useThrottle(fn: (arg?: unknown) => void, delay: number = 5000) {
   let timer: number | null = null;
   return function (...args: unknown[]) {
     if (timer) return;
@@ -12,7 +11,10 @@ function useThrottle(fn: Function, delay: number = 5000) {
   };
 }
 
-export function useThrottleCallBack(fn: Function, delay: number = 5000) {
-  const throttled = useThrottle(fn, delay);
-  return useCallback(throttled, [throttled]);
+export function useThrottleCallBack(
+  fn: (arg?: unknown) => void,
+  delay: number = 5000,
+) {
+  const throttle = useThrottle(fn, delay);
+  return useCallback(throttle, [throttle]);
 }
